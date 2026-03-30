@@ -144,13 +144,13 @@ export const lifecycleStages: LifecycleStage[] = [
         id: 'imss',
         title: { en: 'IMSS Social Security', es: 'IMSS Seguro Social' },
         icon: '🏥',
-        action: { en: 'Register qualifying partners (earning ≥1 min. salary/month) with IMSS within 5 business days. Process bimonthly contributions.', es: 'Registrar socios que califican (ganando ≥1 salario mín./mes) ante el IMSS dentro de 5 días hábiles. Procesar contribuciones bimestrales.' },
+        action: { en: 'Submit monthly batch registration to IMSS within 5 calendar days of month-end for partners earning ≥$9,451 MXN/month (2026 threshold). Process bimonthly contributions.', es: 'Enviar registro mensual por lote al IMSS dentro de los 5 días naturales posteriores al cierre del mes para socios que ganan ≥$9,451 MXN/mes (umbral 2026). Procesar contribuciones bimestrales.' },
         teams: ['Legal', 'Ops', 'Product'],
         friction: {
-          en: ['Income threshold creates two-tier system — partners game hours to qualify/avoid', 'IMSS registration requires CURP + RFC + address — data quality issues'],
-          es: ['Umbral de ingreso crea sistema de dos niveles — socios manipulan horas para calificar/evitar', 'Registro IMSS requiere CURP + RFC + domicilio — problemas de calidad de datos'],
+          en: ['Income threshold ($9,451 MXN/month) creates two-tier system — only ~16% of pilot enrollees qualified for full benefits', 'IMSS registration requires CURP + RFC + address — data quality issues across 200K+ partners'],
+          es: ['Umbral de ingreso ($9,451 MXN/mes) crea sistema de dos niveles — solo ~16% de inscritos en piloto calificaron para prestaciones completas', 'Registro IMSS requiere CURP + RFC + domicilio — problemas de calidad de datos con 200K+ socios'],
         },
-        time: { en: '5 business days (registration)', es: '5 días hábiles (registro)' },
+        time: { en: '5 calendar days (monthly batch)', es: '5 días naturales (lote mensual)' },
       },
       {
         id: 'infonavit',

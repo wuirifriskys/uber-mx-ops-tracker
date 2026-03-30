@@ -41,8 +41,8 @@ export const kpiCards: { label: Record<Lang, string>; value: string; subtext: Re
   },
   {
     label: { en: 'IMSS Compliance Rate', es: 'Tasa de Cumplimiento IMSS' },
-    value: '73%',
-    subtext: { en: 'of qualifying partners enrolled', es: 'de socios que califican inscritos' },
+    value: '16%',
+    subtext: { en: 'of pilot enrollees qualified for full benefits', es: 'de inscritos en piloto calificaron para prestaciones completas' },
   },
   {
     label: { en: 'Partner NPS', es: 'NPS de Socios' },

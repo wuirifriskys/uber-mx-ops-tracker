@@ -17,17 +17,17 @@ export const complianceEvents: ComplianceEvent[] = [
     date: '2026-01-01',
     title: { en: 'Full Mandatory Enforcement Begins', es: 'Inicio de Cumplimiento Obligatorio Total' },
     description: {
-      en: 'Chapter XVIII-BIS of LFT enters full enforcement after pilot. All qualifying platform workers must have formal employment rights.',
-      es: 'Capítulo XVIII-BIS de la LFT entra en cumplimiento total después del piloto. Todos los trabajadores de plataforma que califican deben tener derechos laborales formales.',
+      en: 'Chapter IX Bis of LFT enters full enforcement after pilot. All qualifying platform workers must have formal employment rights.',
+      es: 'Capítulo IX Bis de la LFT entra en cumplimiento total después del piloto. Todos los trabajadores de plataforma que califican deben tener derechos laborales formales.',
     },
     agency: 'STPS',
     action: {
-      en: 'Ensure all workers earning ≥1 minimum salary/month are classified as digital platform workers with full labor rights.',
-      es: 'Asegurar que todos los trabajadores que ganan ≥1 salario mínimo/mes estén clasificados como trabajadores de plataformas digitales con derechos laborales plenos.',
+      en: 'Ensure all workers earning ≥$9,451 MXN/month net (2026 minimum wage threshold) are classified as digital platform workers with full labor rights.',
+      es: 'Asegurar que todos los trabajadores que ganan ≥$9,451 MXN/mes neto (umbral de salario mínimo 2026) estén clasificados como trabajadores de plataformas digitales con derechos laborales plenos.',
     },
     risk: {
-      en: 'Penalties up to MXN 25,000 × UMA per worker. Potential class-action lawsuits and STPS enforcement actions.',
-      es: 'Multas de hasta MXN 25,000 × UMA por trabajador. Posibles demandas colectivas y acciones de cumplimiento de la STPS.',
+      en: 'Penalties from MXN $28,285 to $282,850 per affected worker. Potential class-action lawsuits and STPS enforcement actions.',
+      es: 'Multas de MXN $28,285 a $282,850 por trabajador afectado. Posibles demandas colectivas y acciones de cumplimiento de la STPS.',
     },
     category: 'labor',
   },
@@ -207,8 +207,8 @@ export const complianceEvents: ComplianceEvent[] = [
     date: '2026-06-22',
     title: { en: '1-Year Anniversary of Platform Worker Reform', es: 'Primer Aniversario de la Reforma de Trabajadores de Plataformas' },
     description: {
-      en: 'One year since Chapter XVIII-BIS entered into force. Expected regulatory review and potential amendments based on first year data.',
-      es: 'Un año desde que el Capítulo XVIII-BIS entró en vigor. Revisión regulatoria esperada y posibles enmiendas basadas en datos del primer año.',
+      en: 'One year since Chapter IX Bis entered into force. Expected regulatory review and potential amendments based on first year data.',
+      es: 'Un año desde que el Capítulo IX Bis entró en vigor. Revisión regulatoria esperada y posibles enmiendas basadas en datos del primer año.',
     },
     agency: 'STPS / Congress',
     action: {
