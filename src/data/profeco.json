@@ -1,0 +1,24 @@
+{
+  "platforms": [
+    {
+      "name": "Rappi",
+      "total": 1663,
+      "top_issue": "Non-delivery (35.7%)",
+      "trend": "Peaked 2022, declining"
+    },
+    {
+      "name": "Uber",
+      "total": 201,
+      "top_issue": "Non-delivery + billing errors",
+      "trend": "Growing slowly"
+    },
+    {
+      "name": "DiDi",
+      "total": 166,
+      "top_issue": "Billing errors + fraud (7.2%)",
+      "trend": "9x growth since 2019"
+    }
+  ],
+  "total_complaints_in_dataset": 554655,
+  "date_range": "2019 – Jan 2026"
+}

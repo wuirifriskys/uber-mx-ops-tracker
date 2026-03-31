@@ -1,0 +1,21 @@
+{
+  "isr": {
+    "with_rfc": 0.025,
+    "without_rfc": 0.2
+  },
+  "exclusion_rates": {
+    "car": 0.48,
+    "motorcycle": 0.32,
+    "bicycle": 0.03
+  },
+  "income_thresholds_mxn": {
+    "car": 18427,
+    "motorcycle": 14092,
+    "bicycle": 9878
+  },
+  "imss_worker_contribution": 0.025,
+  "infonavit_employer": 0.05,
+  "weeks_per_month": 4.33,
+  "min_wage_daily_2026": 315.04,
+  "min_wage_monthly_2026": 9451
+}

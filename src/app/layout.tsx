@@ -8,9 +8,9 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Uber Eats Mexico — Delivery Partner Operations Tracker",
+  title: "What Delivery Partners Actually Take Home — Uber Mexico Analysis",
   description:
-    "Interactive operations tracker demonstrating understanding of Uber Mexico's delivery partner lifecycle, regulatory compliance, and operational KPIs.",
+    "Data-driven analysis of Mexico's platform worker reform impact on Uber Eats delivery partner economics. 40,800 reviews analyzed, interactive earnings calculator, real 2026 regulatory data.",
 };
 
 export default function RootLayout({

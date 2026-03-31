@@ -1,0 +1,34 @@
+[
+  {
+    "platform": "Uber Driver",
+    "avg_rating": 3.47,
+    "one_star_pct": 30.0,
+    "five_star_pct": 53.1,
+    "review_count": 10200,
+    "date_range": "Nov 2025 – Mar 2026"
+  },
+  {
+    "platform": "DiDi Driver",
+    "avg_rating": 1.52,
+    "one_star_pct": 81.1,
+    "five_star_pct": 8.8,
+    "review_count": 10200,
+    "date_range": "Jan 2024 – Mar 2026"
+  },
+  {
+    "platform": "Rappi Consumer",
+    "avg_rating": 3.04,
+    "one_star_pct": 41.9,
+    "five_star_pct": 43.1,
+    "review_count": 10200,
+    "date_range": "Nov 2025 – Mar 2026"
+  },
+  {
+    "platform": "Uber Eats Consumer",
+    "avg_rating": 2.8,
+    "one_star_pct": 48.9,
+    "five_star_pct": 38.5,
+    "review_count": 10200,
+    "date_range": "Aug 2025 – Mar 2026"
+  }
+]

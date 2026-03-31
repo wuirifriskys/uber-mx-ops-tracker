@@ -1,0 +1,41 @@
+{
+  "decree_published": "2024-12-24",
+  "effective_date": "2025-06-22",
+  "pilot_start": "2025-07-01",
+  "pilot_end": "2025-12-31",
+  "enforcement_start": "2026-01-01",
+  "sat_realtime_mandate": "2026-04-01",
+  "total_registered": 1349855,
+  "qualifying_full_benefits_jan2026": 139000,
+  "qualifying_pct": 10.3,
+  "pilot_progression": [
+    {
+      "month": "Jul 2025",
+      "qualifying": 132841
+    },
+    {
+      "month": "Aug 2025",
+      "qualifying": 133178
+    },
+    {
+      "month": "Sep 2025",
+      "qualifying": 125757
+    },
+    {
+      "month": "Oct 2025",
+      "qualifying": 150123
+    },
+    {
+      "month": "Nov 2025",
+      "qualifying": 164205
+    },
+    {
+      "month": "Dec 2025",
+      "qualifying": 206521
+    },
+    {
+      "month": "Jan 2026",
+      "qualifying": 139000
+    }
+  ]
+}
