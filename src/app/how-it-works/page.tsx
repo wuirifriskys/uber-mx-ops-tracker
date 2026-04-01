@@ -259,49 +259,6 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      {/* UBER IS ALREADY AI-FIRST */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold mb-2">Uber Is Already AI-First</h2>
-        <p className="text-gray-500 mb-8 max-w-2xl">
-          I&apos;m not proposing to &ldquo;bring AI to Uber&rdquo; — Uber already runs
-          one of the most sophisticated ML infrastructures in the world. The question
-          is how to extend these capabilities into S&amp;O workflows.
-        </p>
-        <div className="grid md:grid-cols-2 gap-6 mb-10">
-          {[
-            {
-              name: "Michelangelo",
-              desc: "Uber's ML platform powering ETA predictions, pricing, fraud detection across billions of trips.",
-            },
-            {
-              name: "Driver Safety ML",
-              desc: "Real-time trip monitoring, anomaly detection, crash detection algorithms protecting millions of rides daily.",
-            },
-            {
-              name: "Customer Service AI",
-              desc: "Automated resolution for common support issues, reducing ticket volume and response times at scale.",
-            },
-            {
-              name: "Marketplace Optimization",
-              desc: "Dynamic pricing, supply-demand matching, surge prediction — all powered by real-time ML pipelines.",
-            },
-          ].map((item) => (
-            <div key={item.name} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <h3 className="font-bold mb-2">{item.name}</h3>
-              <p className="text-sm text-gray-600">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-        <div className="bg-white rounded-xl p-6 border border-[#276EF1]/20">
-          <p className="text-sm text-gray-700">
-            Applying AI agent systems to S&amp;O workflows is a natural extension of
-            Uber&apos;s existing AI infrastructure — not a new capability, but a new
-            application of what Uber already does better than almost anyone.
-          </p>
-        </div>
-      </section>
-
-
       {/* WHAT AGENTS CAN'T DO */}
       <section className="max-w-5xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold mb-2">What Agents Can&apos;t Do</h2>
@@ -353,68 +310,18 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      {/* CREDENTIALS */}
+      {/* CREDENTIALS — compact */}
       <section className="bg-gray-50 border-y border-gray-200">
-        <div className="max-w-5xl mx-auto px-6 py-16">
-          <h2 className="text-3xl font-bold mb-6">Background &amp; Credentials</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <p className="text-gray-600 mb-4">
-                This isn&apos;t theoretical — I&apos;ve been building and operating with
-                AI agent systems daily for over a year. The infrastructure that
-                produced this analysis is the same one I use to run my own business.
-              </p>
-              <div className="space-y-3 text-sm">
-                <div className="flex gap-3 items-start">
-                  <div className="w-2 h-2 rounded-full bg-[#276EF1] mt-1.5 shrink-0" />
-                  <p className="text-gray-600">
-                    <strong>Claude Code Certified by Anthropic</strong> — trained and
-                    certified on agentic AI development with Claude&apos;s agent
-                    infrastructure
-                  </p>
-                </div>
-                <div className="flex gap-3 items-start">
-                  <div className="w-2 h-2 rounded-full bg-[#276EF1] mt-1.5 shrink-0" />
-                  <p className="text-gray-600">
-                    <strong>Daily production use</strong> — research, data pipelines,
-                    monitoring, content generation, and full-stack development through
-                    coordinated agent workflows
-                  </p>
-                </div>
-                <div className="flex gap-3 items-start">
-                  <div className="w-2 h-2 rounded-full bg-[#276EF1] mt-1.5 shrink-0" />
-                  <p className="text-gray-600">
-                    <strong>Real business impact</strong> — built and operate Bookids,
-                    an AI-powered e-commerce platform across 3 markets with zero
-                    external funding
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-black rounded-xl p-8 text-white">
-              <h3 className="font-bold text-lg mb-4">The reference points</h3>
-              <p className="text-gray-400 text-sm mb-4">
-                Companies already operating this way at enterprise scale:
-              </p>
-              <div className="space-y-4 text-sm">
-                <div>
-                  <p className="font-semibold">Uber — Michelangelo, Safety ML, Marketplace AI</p>
-                  <p className="text-gray-400">Already runs one of the world&apos;s most advanced ML platforms. Agent systems for S&amp;O extend existing infrastructure into new workflows.</p>
-                </div>
-                <div>
-                  <p className="font-semibold">Block (Square) — &ldquo;Goose&rdquo;</p>
-                  <p className="text-gray-400">150+ internal service integrations. 8-10 hours saved per employee per week. Used by HR, legal, ops, and strategy teams.</p>
-                </div>
-                <div>
-                  <p className="font-semibold">Nubank</p>
-                  <p className="text-gray-400">5,000+ employees use AI tools monthly across operations. 70% response time reduction. 13M+ customers in Mexico alone.</p>
-                </div>
-              </div>
-              <p className="text-gray-500 text-xs mt-6">
-                Sources: Uber Engineering Blog, Couchbase case study, Block/Sequoia podcast, Nubank tech blog
-              </p>
-            </div>
-          </div>
+        <div className="max-w-5xl mx-auto px-6 py-12">
+          <p className="text-sm text-gray-600 leading-relaxed max-w-3xl">
+            This isn&apos;t theoretical. I&apos;ve used AI agent systems daily for over
+            a year to run <strong>Bookids</strong> (an AI e-commerce platform across 3
+            markets, built from zero with no external funding). The same infrastructure
+            that produced this analysis powers research, data pipelines, and operational
+            monitoring in production. Companies like Block (&ldquo;Goose&rdquo; — 8-10 hrs
+            saved per employee per week) and Nubank (5,000+ employees using AI tools monthly)
+            are already operating this way at scale.
+          </p>
         </div>
       </section>
 

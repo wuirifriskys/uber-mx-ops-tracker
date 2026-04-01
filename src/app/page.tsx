@@ -369,9 +369,6 @@ export default function Home() {
                   <th className="py-4 px-4 font-semibold text-right">
                     5-Star %
                   </th>
-                  <th className="py-4 px-4 font-semibold text-right">
-                    Reviews
-                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -398,9 +395,6 @@ export default function Home() {
                     </td>
                     <td className="py-4 px-4 text-right font-mono">
                       {c.five_star_pct}%
-                    </td>
-                    <td className="py-4 px-4 text-right font-mono">
-                      {c.review_count.toLocaleString()}
                     </td>
                   </tr>
                 ))}
@@ -485,254 +479,62 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════════ 8. HOW THIS WAS BUILT ═══════════ */}
-      <section>
+      {/* ═══════════ 8. ABOUT & HOW THIS WAS BUILT ═══════════ */}
+      <section className="bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 py-16 md:py-24">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <p className="text-[#276EF1] font-semibold text-sm uppercase tracking-widest mb-4">
-                How This Was Built
+              <h2 className="text-2xl font-bold mb-4">About This Analysis</h2>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                Built in one working day by <strong>Alex Friedlander</strong> using
+                an AI agent system that coordinates data collection, regulatory
+                research, and web development. The same approach I&apos;d bring to
+                Uber&apos;s S&amp;O workflows.
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                One person.
-                <br />
-                One day.
-                <br />
-                An agent system.
-              </h2>
-              <p className="text-gray-600 mb-4">
-                This entire analysis &mdash; data collection, processing,
-                visualization, and deployment &mdash; was built in a single
-                working day using a personal AI agent system.
-              </p>
-              <p className="text-gray-600 mb-4">
-                Not by copy-pasting into ChatGPT. Through coordinated specialist
-                agents that I design, direct, and quality-control &mdash; the
-                same system I&apos;d use to accelerate Uber&apos;s S&amp;O workflows.
-              </p>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
                 But data and tools are only half of this role. The other half is
                 sitting in a room with Legal, Product, and Territory Ops &mdash;
                 translating regulatory requirements into processes that people
                 actually follow. At Accenture, I spent four years doing exactly
-                that: coordinating 3&ndash;5 stakeholder groups who each had
-                different priorities, building frameworks they could all use, and
-                making compliance feel like an operational advantage rather than
-                a burden. That&apos;s the part no agent can do.
+                that: coordinating 3&ndash;5 stakeholder groups with different
+                priorities, and making compliance feel like an operational
+                advantage rather than a burden.
               </p>
               <a
                 href="/how-it-works"
-                className="inline-flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-800 transition"
+                className="inline-flex items-center gap-2 text-[#276EF1] text-sm font-medium hover:underline"
               >
-                See the full system breakdown &rarr;
+                See the system and proposed ops tools &rarr;
               </a>
             </div>
-            <div className="bg-black rounded-xl p-6 text-white text-sm">
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-[#276EF1] text-xs font-bold">
-                    D
-                  </div>
-                  <div>
-                    <p className="font-semibold">Data Agents</p>
-                    <p className="text-gray-400 text-xs">
-                      Google Play scraping, Profeco API, IMSS data
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs font-bold">
-                    R
-                  </div>
-                  <div>
-                    <p className="font-semibold">Research Agents</p>
-                    <p className="text-gray-400 text-xs">
-                      DOF regulatory analysis, SAT tax rates, KPMG reports
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-violet-500/20 flex items-center justify-center text-violet-400 text-xs font-bold">
-                    E
-                  </div>
-                  <div>
-                    <p className="font-semibold">Execution Agents</p>
-                    <p className="text-gray-400 text-xs">
-                      Python pipeline, Next.js web, Vercel deploy
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 text-xs font-bold">
-                    Q
-                  </div>
-                  <div>
-                    <p className="font-semibold">Quality Agents</p>
-                    <p className="text-gray-400 text-xs">
-                      Visual audit, mobile test, data verification
-                    </p>
-                  </div>
-                </div>
-                <div className="border-t border-white/10 pt-3 mt-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-[#276EF1]/30 flex items-center justify-center text-[#276EF1] text-xs font-bold">
-                      AF
-                    </div>
-                    <div>
-                      <p className="font-semibold">Strategic Layer (Me)</p>
-                      <p className="text-gray-400 text-xs">
-                        Framework design, insight extraction, quality control
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════ 9. ABOUT THIS ANALYSIS ═══════════ */}
-      <section className="bg-gray-50">
-        <div className="max-w-5xl mx-auto px-6 py-16 md:py-24">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            About This Analysis
-          </h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Left: Bio */}
             <div>
-              <p className="text-gray-600 mb-3 font-semibold text-lg">
-                Alex Friedlander
-              </p>
-              <ul className="text-gray-600 text-sm space-y-2.5 mb-6">
-                <li>
-                  &bull;{" "}
-                  <strong>BBA, ESADE Business School</strong> (Ramon Llull
-                  University, Barcelona)
-                </li>
-                <li>
-                  &bull;{" "}
-                  <strong>4 years at Alfa Consulting / Accenture</strong>{" "}
-                  &mdash; Strategy &amp; operational improvement for major
-                  utilities across the US, Spain, and Singapore. Built Power BI
-                  dashboards for executive decision-making, led maintenance
-                  optimization, designed crew programs improving field
-                  productivity.
-                </li>
-                <li>
-                  &bull;{" "}
-                  <strong>AI Business Development, ZenAI Group (APAC)</strong>{" "}
-                  &mdash; Sole responsibility for expanding an AI solutions
-                  company across Southeast Asia. Built enterprise sales pipeline
-                  from scratch in a new market.
-                </li>
-                <li>
-                  &bull; <strong>Founder, Bookids</strong> &mdash; AI-powered
-                  personalized children&apos;s books. Built from zero to live
-                  product across 3 markets with no external funding.
-                </li>
-                <li>
-                  &bull; <strong>Spanish &amp; US citizen</strong> &mdash;
-                  Native Spanish speaker with direct operational context for
-                  Mexico&apos;s regulatory and cultural landscape.
-                </li>
-              </ul>
-              <p className="text-sm text-gray-500">
-                alexfriedlander01@gmail.com
-              </p>
-            </div>
-
-            {/* Right: Why This Matters */}
-            <div className="space-y-4">
-              <h3 className="font-bold text-lg">
-                Why This Matters for the Role
+              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">
+                Data Sources &amp; Limitations
               </h3>
-              <div className="space-y-3 text-sm">
-                {[
-                  [
-                    "Design operational workflows",
-                    "Interactive calculator models the registration/threshold workflow",
-                  ],
-                  [
-                    "Identify partner pain points",
-                    "40K review sentiment analysis across 4 platforms",
-                  ],
-                  [
-                    "Use SQL and data tools",
-                    "Python pipeline + regulatory data analysis + Next.js visualization",
-                  ],
-                  [
-                    "Monitor compliance metrics",
-                    "Full Chapter IX Bis analysis with enrollment tracking",
-                  ],
-                  [
-                    "Stay informed on regulatory trends",
-                    "Real-time reform tracking through SAT mandate date",
-                  ],
-                  [
-                    "Advocate for delivery partners",
-                    "Partner economics and sentiment front and center",
-                  ],
-                ].map(([req, proof]) => (
-                  <div key={req} className="flex gap-3">
-                    <span className="text-[#276EF1] mt-0.5 shrink-0 font-bold">
-                      &#10003;
-                    </span>
-                    <div>
-                      <p className="font-medium text-gray-900">
-                        &ldquo;{req}&rdquo;
-                      </p>
-                      <p className="text-gray-500">{proof}</p>
-                    </div>
-                  </div>
-                ))}
+              <div className="text-sm text-gray-500 space-y-2">
+                <p>
+                  <strong>Reviews:</strong> Google Play Store, scraped March 2026.
+                  Most recent ~10,000 reviews sampled per platform.
+                </p>
+                <p>
+                  <strong>Regulatory data:</strong> DOF, SAT published rates, IMSS
+                  datos abiertos, KPMG, Greenberg Traurig.
+                </p>
+                <p>
+                  <strong>Complaints:</strong> Profeco Bur&oacute; Comercial via
+                  datos.gob.mx ({profeco.total_complaints_in_dataset.toLocaleString()} total).
+                </p>
+                <p>
+                  <strong>Calculator:</strong> ISR from Art. 113-A LISR. Thresholds
+                  from DOF Dec 2025. IMSS contribution at 2.5%.
+                </p>
+                <p className="mt-3 bg-amber-50 border border-amber-200 rounded-lg p-3 text-amber-800">
+                  Review data is sampled, not exhaustive. Calculator uses published
+                  rates &mdash; actual implementations may vary. IMSS figures from
+                  news reports, not raw data.
+                </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════ 10. METHODOLOGY ═══════════ */}
-      <section>
-        <div className="max-w-5xl mx-auto px-6 py-12">
-          <h3 className="font-bold text-lg mb-4">
-            Methodology &amp; Data Sources
-          </h3>
-          <div className="text-sm text-gray-500 space-y-2">
-            <p>
-              <strong>Review data:</strong> Google Play Store, scraped March
-              2026. 10,200 reviews per platform (Uber Driver, DiDi Driver, Uber
-              Eats Consumer, Rappi Consumer). Sentiment and keyword analysis via
-              Python NLP pipeline.
-            </p>
-            <p>
-              <strong>Regulatory data:</strong> DOF (Diario Oficial de la
-              Federaci&oacute;n), SAT published rates, IMSS datos abiertos,
-              KPMG Mexico tax guides, Greenberg Traurig regulatory analysis.
-            </p>
-            <p>
-              <strong>Complaint data:</strong> Profeco Bur&oacute; Comercial via
-              datos.gob.mx &mdash;{" "}
-              {profeco.total_complaints_in_dataset.toLocaleString()} total
-              complaints in dataset ({profeco.date_range}).
-            </p>
-            <p>
-              <strong>Calculator parameters:</strong> ISR withholding rates from
-              Art. 113-A LISR. Exclusion rates and income thresholds from DOF
-              December 2025 revision. IMSS worker contribution at 2.5% per
-              official schedule.
-            </p>
-            <p className="mt-3 bg-amber-50 border border-amber-200 rounded-lg p-3 text-amber-800">
-              <strong>Known limitations:</strong> Review data represents Google
-              Play Store users, not a representative survey of all delivery
-              partners. Calculator uses published rates &mdash; actual employer
-              implementations may vary. IMSS pilot enrollment figures are from
-              news reports, not raw IMSS data. Profeco complaints reflect
-              formally filed cases, not total dissatisfaction.
-            </p>
-            <p className="text-xs text-gray-400 mt-2">
-              All data scraped and collected: March 2026.
-            </p>
           </div>
         </div>
       </section>
