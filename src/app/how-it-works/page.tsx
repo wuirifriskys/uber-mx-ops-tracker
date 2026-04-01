@@ -13,21 +13,105 @@ export default function HowItWorks() {
             &larr; Back to Analysis
           </Link>
           <p className="text-[#276EF1] font-semibold text-sm uppercase tracking-widest mb-4">
-            The System Behind the Work
+            What I&apos;d Build for Uber&apos;s S&amp;O Team
           </p>
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            One Person. One Session.<br />Real Data.
+            5 Tools for Delivery<br />Partner Operations
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl">
-            How an AI agent system turned regulatory research, 40,800 app reviews,
-            and Mexican compliance data into an actionable analysis — in a single
-            working session.
+            The analysis you just saw &mdash; 40,800 reviews, regulatory data, interactive calculator &mdash; was built in one working day. Here are the operational tools I&apos;d build for the team, and the system that makes it possible.
           </p>
         </div>
       </section>
 
+      {/* PROPOSED S&O TOOLS — MOVED UP: lead with value */}
+      <section className="bg-gray-50 border-b border-gray-200">
+        <div className="max-w-5xl mx-auto px-6 py-16">
+          <h2 className="text-3xl font-bold mb-2">What I&apos;d Build First</h2>
+          <p className="text-gray-500 mb-10 max-w-2xl">
+            Five systems that solve specific operational pain points for delivery partner operations.
+            Start with one, prove value, scale from there.
+          </p>
+
+          <div className="space-y-6">
+            {[
+              {
+                name: "Partner Income Monitor",
+                trigger: "Runs daily",
+                does: "Tracks which delivery partners are approaching the formal employment threshold. Flags threshold-crossing events for IMSS batch processing, reducing registration errors and improving monthly batch accuracy.",
+                impact: "Reduce IMSS registration errors, improve monthly batch accuracy, prevent compliance gaps before they happen.",
+                phase: "Phase 1",
+              },
+              {
+                name: "Compliance Deadline Engine",
+                trigger: "Runs continuously",
+                does: "Auto-tracks all IMSS, SAT, and INFONAVIT obligations with dependency mapping. Alerts the team 30, 15, and 7 days before each deadline with required actions and responsible owners.",
+                impact: "Prevent missed filings, reduce penalty risk, eliminate the spreadsheet tracking that inevitably falls behind.",
+                phase: "Phase 1",
+              },
+              {
+                name: "Partner Sentiment Tracker",
+                trigger: "Runs weekly",
+                does: "Scrapes Google Play reviews and driver forum mentions. NLP sentiment analysis with reform-keyword flagging surfaces emerging complaints before they become retention crises.",
+                impact: "Early warning on partner satisfaction drops — before they show up in retention metrics or media coverage.",
+                phase: "Phase 2",
+              },
+              {
+                name: "Regulatory Change Scanner",
+                trigger: "Runs daily",
+                does: "Monitors DOF (Diario Oficial), STPS announcements, and SAT bulletins. Flags changes that affect platform worker obligations and summarizes relevance to Uber&apos;s Mexico operations.",
+                impact: "Days or weeks of lead time vs. manual monitoring. Never blindsided by regulatory changes.",
+                phase: "Phase 2",
+              },
+              {
+                name: "Cross-functional Coordination Dashboard",
+                trigger: "On-demand",
+                does: "Single view of compliance status across Legal, Product, Ops, and Support. Tracks which team owns which obligation, current status, and blockers in real time.",
+                impact: "Replaces status meetings with real-time visibility. Everyone sees the same truth.",
+                phase: "Phase 3",
+              },
+            ].map((system, i) => (
+              <div key={system.name} className="bg-white rounded-xl border border-gray-200 p-6 md:p-8 hover:border-[#276EF1]/30 transition">
+                <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+                  <div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-[#276EF1] font-mono font-bold text-sm">0{i + 1}</span>
+                      <h3 className="font-bold text-lg">{system.name}</h3>
+                    </div>
+                    <p className="text-gray-400 text-sm mt-1">{system.trigger}</p>
+                  </div>
+                  <span className="text-xs bg-gray-100 text-gray-500 px-3 py-1 rounded-full">{system.phase}</span>
+                </div>
+                <div className="grid md:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <p className="font-semibold text-gray-500 mb-1">What it does</p>
+                    <p className="text-gray-600">{system.does}</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-500 mb-1">Impact</p>
+                    <p className="text-gray-600">{system.impact}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* HOW THIS IS POSSIBLE — transition heading */}
+      <section className="max-w-5xl mx-auto px-6 pt-16 pb-4">
+        <p className="text-[#276EF1] font-semibold text-sm uppercase tracking-widest mb-2">
+          How This Is Possible
+        </p>
+        <h2 className="text-3xl font-bold mb-2">The System Behind the Speed</h2>
+        <p className="text-gray-500 max-w-2xl">
+          Every tool above can be built because of an AI agent system I operate daily.
+          Here&apos;s how it works.
+        </p>
+      </section>
+
       {/* TRADITIONAL VS AGENTIC */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
+      <section className="max-w-5xl mx-auto px-6 py-12">
         <h2 className="text-3xl font-bold mb-4">The Traditional Way vs. The Agentic Way</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gray-50 rounded-xl p-8 border border-gray-200">
@@ -78,7 +162,7 @@ export default function HowItWorks() {
               </li>
             </ul>
             <div className="mt-6 pt-4 border-t border-white/10">
-              <p className="text-gray-400 text-sm">Single working session &bull; Zero handoffs &bull; Every figure human-verified</p>
+              <p className="text-gray-400 text-sm">Single working day &bull; Zero handoffs &bull; Every figure human-verified</p>
             </div>
           </div>
         </div>
@@ -217,79 +301,6 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      {/* PROPOSED S&O TOOLS */}
-      <section className="bg-gray-50 border-y border-gray-200">
-        <div className="max-w-5xl mx-auto px-6 py-16">
-          <h2 className="text-3xl font-bold mb-2">Proposed S&amp;O Tools for Delivery Partner Operations</h2>
-          <p className="text-gray-500 mb-10 max-w-2xl">
-            Five systems that could be built incrementally, each solving a specific
-            operational pain point. Start with one, prove value, scale from there.
-          </p>
-
-          <div className="space-y-6">
-            {[
-              {
-                name: "Partner Income Monitor",
-                trigger: "Runs daily",
-                does: "Tracks which delivery partners are approaching the formal employment threshold. Flags threshold-crossing events for IMSS batch processing, reducing registration errors and improving monthly batch accuracy.",
-                impact: "Reduce IMSS registration errors, improve monthly batch accuracy, prevent compliance gaps before they happen.",
-                phase: "Phase 1",
-              },
-              {
-                name: "Compliance Deadline Engine",
-                trigger: "Runs continuously",
-                does: "Auto-tracks all IMSS, SAT, and INFONAVIT obligations with dependency mapping. Alerts the team 30, 15, and 7 days before each deadline with required actions and responsible owners.",
-                impact: "Prevent missed filings, reduce penalty risk, eliminate the spreadsheet tracking that inevitably falls behind.",
-                phase: "Phase 1",
-              },
-              {
-                name: "Partner Sentiment Tracker",
-                trigger: "Runs weekly",
-                does: "Scrapes Google Play reviews and driver forum mentions. NLP sentiment analysis with reform-keyword flagging surfaces emerging complaints before they become retention crises.",
-                impact: "Early warning on partner satisfaction drops — before they show up in retention metrics or media coverage.",
-                phase: "Phase 2",
-              },
-              {
-                name: "Regulatory Change Scanner",
-                trigger: "Runs daily",
-                does: "Monitors DOF (Diario Oficial), STPS announcements, and SAT bulletins. Flags changes that affect platform worker obligations and summarizes relevance to Uber's Mexico operations.",
-                impact: "Days or weeks of lead time vs. manual monitoring. Never blindsided by regulatory changes.",
-                phase: "Phase 2",
-              },
-              {
-                name: "Cross-functional Coordination Dashboard",
-                trigger: "On-demand",
-                does: "Single view of compliance status across Legal, Product, Ops, and Support. Tracks which team owns which obligation, current status, and blockers in real time.",
-                impact: "Replaces status meetings with real-time visibility. Everyone sees the same truth.",
-                phase: "Phase 3",
-              },
-            ].map((system, i) => (
-              <div key={system.name} className="bg-white rounded-xl border border-gray-200 p-6 md:p-8 hover:border-[#276EF1]/30 transition">
-                <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
-                  <div>
-                    <div className="flex items-center gap-3">
-                      <span className="text-[#276EF1] font-mono font-bold text-sm">0{i + 1}</span>
-                      <h3 className="font-bold text-lg">{system.name}</h3>
-                    </div>
-                    <p className="text-gray-400 text-sm mt-1">{system.trigger}</p>
-                  </div>
-                  <span className="text-xs bg-gray-100 text-gray-500 px-3 py-1 rounded-full">{system.phase}</span>
-                </div>
-                <div className="grid md:grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <p className="font-semibold text-gray-500 mb-1">What it does</p>
-                    <p className="text-gray-600">{system.does}</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-500 mb-1">Impact</p>
-                    <p className="text-gray-600">{system.impact}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* WHAT AGENTS CAN'T DO */}
       <section className="max-w-5xl mx-auto px-6 py-16">

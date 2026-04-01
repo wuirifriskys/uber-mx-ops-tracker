@@ -21,10 +21,6 @@ const DynCharts = {
     () => import("@/components/Charts").then((m) => m.Charts.MonthlyRatings),
     { ssr: false, loading: () => loadingSkeleton(400) }
   ),
-  KeywordComparison: dynamic(
-    () => import("@/components/Charts").then((m) => m.Charts.KeywordComparison),
-    { ssr: false, loading: () => loadingSkeleton(400) }
-  ),
   PilotEnrollment: dynamic(
     () => import("@/components/Charts").then((m) => m.Charts.PilotEnrollment),
     { ssr: false, loading: () => loadingSkeleton(300) }
@@ -75,27 +71,6 @@ const monthlyRatingsData = allMonths.map((month) => {
   };
 });
 
-// Keyword comparison: top 10 keywords from Uber vs DiDi 1-star
-const uberKw = Object.fromEntries(
-  uberDriver.top_keywords_1star.map((k) => [k.word, k.count])
-);
-const didiKw = Object.fromEntries(
-  didiDriver.top_keywords_1star.map((k) => [k.word, k.count])
-);
-const allKeywords = [
-  ...new Set([
-    ...uberDriver.top_keywords_1star.map((k) => k.word),
-    ...didiDriver.top_keywords_1star.map((k) => k.word),
-  ]),
-];
-const keywordData = allKeywords
-  .map((word) => ({
-    word,
-    uber: uberKw[word] ?? 0,
-    didi: didiKw[word] ?? 0,
-  }))
-  .sort((a, b) => b.uber + b.didi - (a.uber + a.didi))
-  .slice(0, 10);
 
 // Break-even pre-computation
 const breakEvenData = [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60].map(
@@ -282,26 +257,26 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Keyword comparison chart */}
-          <div className="bg-white rounded-xl border border-gray-200 p-6 mb-8">
-            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">
-              Top Keywords in 1-Star Reviews &mdash; Uber Driver vs DiDi Driver
-            </h3>
-            <DynCharts.KeywordComparison data={keywordData} />
+          {/* Key stat callout */}
+          <div className="grid sm:grid-cols-3 gap-4 mb-8">
+            <div className="bg-white rounded-xl border border-gray-200 p-6 text-center">
+              <p className="text-3xl font-bold text-[#276EF1]">929</p>
+              <p className="text-sm text-gray-600 mt-1">mentions of &ldquo;tarifas&rdquo; (fares) in Uber 1-star reviews</p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-200 p-6 text-center">
+              <p className="text-3xl font-bold text-[#276EF1]">513</p>
+              <p className="text-sm text-gray-600 mt-1">mentions of &ldquo;ganancias&rdquo; (earnings) in Uber 1-star reviews</p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-200 p-6 text-center">
+              <p className="text-3xl font-bold text-[#276EF1]">3.76 → 3.35</p>
+              <p className="text-sm text-gray-600 mt-1">Uber Driver rating drop (Dec 2025 → Mar 2026)</p>
+            </div>
           </div>
 
           <div className="bg-white rounded-xl border border-gray-200 p-6">
             <h3 className="font-bold text-lg mb-2">Key Finding</h3>
             <p className="text-gray-600 leading-relaxed">
-              The reform&apos;s impact is visible in partner sentiment. Uber
-              Driver ratings dropped from 3.76 in December 2025 to 3.35 in
-              March 2026 &mdash; coinciding exactly with the January enforcement
-              deadline. The top 1-star keywords tell the story:{" "}
-              <em>tarifas</em> (fares), <em>ganancias</em> (earnings), and{" "}
-              <em>pagan</em> (they pay) dominate Uber complaints, while DiDi
-              drivers focus on <em>pedido</em> (orders) and <em>servicio</em>{" "}
-              (service). Uber partners are frustrated about money; DiDi partners
-              are frustrated about the product itself.
+              The reform created a partner earnings crisis, not a service quality problem. The #1 complaint word in Uber Driver 1-star reviews is <em>tarifas</em> (fares), followed by <em>ganancias</em> (earnings) and <em>comisi&oacute;n</em> (commission). Partners are explicitly connecting the reform to fare reductions &mdash; the most-upvoted review (2,120 thumbs up) states that &ldquo;the salary went up 23% and Uber lowered the fares before that.&rdquo; Meanwhile, DiDi drivers complain about the product itself (<em>servicio</em>, <em>soporte</em>). The distinction matters operationally: Uber&apos;s problem is solvable through communication, transparency, and partner education &mdash; not app fixes.
             </p>
           </div>
         </div>
@@ -367,8 +342,8 @@ export default function Home() {
             Competitive Landscape
           </h2>
           <p className="text-lg text-gray-600 mb-10 max-w-2xl">
-            Google Play Store ratings and Profeco complaint data across
-            Mexico&apos;s major delivery platforms.
+            Google Play Store driver app ratings and Profeco formal complaint data across
+            Mexico&apos;s major platforms.
           </p>
 
           {/* Competitive ratings chart */}
@@ -456,15 +431,15 @@ export default function Home() {
           <div className="bg-white rounded-xl border border-gray-200 p-6">
             <h3 className="font-bold text-lg mb-2">Key Finding</h3>
             <p className="text-gray-600 leading-relaxed">
-              DiDi&apos;s 1.52 average rating versus Uber&apos;s 3.47 represents
-              a massive perception gap &mdash; 81% of DiDi reviews are 1-star.
-              Yet DiDi has only 166 Profeco complaints versus Rappi&apos;s 1,663,
-              suggesting DiDi&apos;s problems live in the app experience while
-              Rappi&apos;s issues escalate to formal regulatory complaints. For
-              Uber, the relatively low 201 Profeco complaints combined with
-              stronger app ratings indicate a more operational &mdash; rather
-              than product &mdash; set of challenges, which aligns with the
-              reform-driven sentiment shift visible in the review data.
+              Uber Driver&apos;s 3.47 rating is the strongest among delivery
+              platforms &mdash; but the post-reform decline signals a
+              reform-specific problem, not a product one. DiDi&apos;s 1.52
+              rating (81% one-star) reflects deep product/support issues
+              predating the reform. The Profeco data adds context: Uber has
+              only 201 formal complaints over 7 years, compared to
+              Rappi&apos;s 1,663. Uber&apos;s challenge is partner trust
+              and communication around the reform &mdash; not systemic
+              service failures.
             </p>
           </div>
         </div>
@@ -521,20 +496,29 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 One person.
                 <br />
-                One session.
+                One day.
                 <br />
                 An agent system.
               </h2>
               <p className="text-gray-600 mb-4">
                 This entire analysis &mdash; data collection, processing,
                 visualization, and deployment &mdash; was built in a single
-                working session using a personal AI agent system.
+                working day using a personal AI agent system.
               </p>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-4">
                 Not by copy-pasting into ChatGPT. Through coordinated specialist
                 agents that I design, direct, and quality-control &mdash; the
-                same system I&apos;d build for Uber&apos;s Strategy &amp; Ops
-                team.
+                same system I&apos;d use to accelerate Uber&apos;s S&amp;O workflows.
+              </p>
+              <p className="text-gray-600 mb-6">
+                But data and tools are only half of this role. The other half is
+                sitting in a room with Legal, Product, and Territory Ops &mdash;
+                translating regulatory requirements into processes that people
+                actually follow. At Accenture, I spent four years doing exactly
+                that: coordinating 3&ndash;5 stakeholder groups who each had
+                different priorities, building frameworks they could all use, and
+                making compliance feel like an operational advantage rather than
+                a burden. That&apos;s the part no agent can do.
               </p>
               <a
                 href="/how-it-works"
